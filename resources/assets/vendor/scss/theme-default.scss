@@ -2,7 +2,7 @@
 @import './_theme/common';
 @import './_theme/_theme';
 
-$primary-color: rgb(8 60 132 / 1);
+$primary-color: #07553B;
 
 @include template-common-theme($primary-color);
 

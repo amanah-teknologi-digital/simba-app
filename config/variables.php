@@ -1,14 +1,14 @@
 <?php
 // Variables
 return [
-    "creatorName" => "Teknik Geofisika ITS",
-    "creatorUrl" => "https://www.youtube.com/channel/UC78HW-Wv_VUnVM6x1lhHw6Q",
-    "templateName" => "GeoReserve",
+    "creatorName" => "Manejemen Bisnis ITS",
+    "creatorUrl" => "https://www.youtube.com/channel/UCzHCBGSt9TLaJ3zVxPZ0EPQ",
+    "templateName" => "SIMBA",
     "templateSuffix" => "Bootstrap Dashboard FREE",
     "templateVersion" => "2.0.0",
     "templateFree" => true,
-    "templateDescription" => "Sistem ini menyediakan layanan persuratan, peminjaman ruangan, dan peminjaman alat di Departemen Teknik Geofisika ITS",
-    "templateKeyword" => "Geofisika ITS, ITS, Teknik Geofisika ITS, Geo Letter, Geo Room, Geo Facility",
+    "templateDescription" => "Sistem ini menyediakan layanan persuratan, peminjaman ruangan, dan peminjaman alat di Departemen Manajemen Bisnis ITS",
+    "templateKeyword" => "Manajemen Bisnis ITS, ITS, Pengajuan Surat Manajemen Bisnis ITS, Pengajuan Ruangan Manajemen Bisnis ITS",
     "licenseUrl" => "https://themeselection.com/license/",
     "livePreview" => "https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template-free/demo/",
     "productPage" => "https://themeselection.com/item/sneat-dashboard-free-laravel/",
@@ -25,8 +25,8 @@ return [
     "githubUrl" => "https://github.com/themeselection",
     "dribbbleUrl" => "https://dribbble.com/themeselection",
     "instagramUrl" => "https://www.instagram.com/themeselection/",
-    "namaLayananPersuratan" => "Geo Letter",
-    "namaLayananSewaRuangan" => "Geo Room",
-    "namaLayananSewaPeralatan" => "Geo Tools",
-    "namaFakultas" => "TEKNIK GEOFISIKA ITS",
+    "namaLayananPersuratan" => "Surat",
+    "namaLayananSewaRuangan" => "Ruangan",
+    "namaLayananSewaPeralatan" => "Peralatan",
+    "namaFakultas" => "MANAJEMEN BISNIS ITS",
 ];

@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>GeoReserve</title>
-    <meta name="description" content="Sistem Informasi Manajemen Geofisika ITS (GeoReserve) untuk pengajuan persuratan, booking ruangan, peminjaman peralatan, dan informasi terbaru. Efisien, cepat, dan terintegrasi.">
-    <meta name="keywords" content="sistem informasi, manajemen, persuratan, booking ruangan, peminjaman peralatan, georeserve, ITS, Geofisika">
+    <title>SIMBA</title>
+    <meta name="description" content="Sistem Informasi Manajemen Manajemen Bisnis ITS (SIMBA) untuk pengajuan persuratan, booking ruangan dan informasi terbaru. Efisien, cepat, dan terintegrasi.">
+    <meta name="keywords" content="sistem informasi, manajemen, persuratan, booking ruangan, peminjaman peralatan, simba, ITS, Manajemen Bisnis ITS">
 
     <!-- Favicons -->
     <link href="{{ asset('landing_page_rss/teknikgeo.png') }}" rel="icon">
@@ -33,8 +33,8 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <a href="{{ route('landingpage') }}" class="logo d-flex align-items-center me-auto me-xl-0 order-first">
-            <img src="{{ asset('landing_page_rss/teknikgeo.png') }}" alt="" class="logo-img">
-            <h1 class="sitename">GeoReserve</h1>
+            <img src="{{ asset('landing_page_rss/logo-manbis.png') }}" alt="" class="logo-img">
+{{--            <h1 class="sitename">SIMBA</h1>--}}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 text-lg-start text-center" >
-                <h1 class="sitename" data-aos="fade-right" data-aos-delay="0">Selamat Datang di GeoReserve</h1>
+                <h1 class="sitename" data-aos="fade-right" data-aos-delay="0">Selamat Datang di SIMBA</h1>
                 <p data-aos="fade-right" data-aos-delay="100">Kelola persuratan, booking ruangan dan peralatan, serta pantau pengumuman terbaru dalam satu platform yang cepat, aman, dan terintegrasi.</p>
                 <div class="hero-buttons d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="200">
                     <a href="{{ route('pengajuansurat') }}" class="btn btn-ajukan"><i class="bi bi-envelope-fill"></i>Ajukan Surat</a>
@@ -85,13 +85,16 @@
                     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('landing_page_rss/gedung.png') }}" class="d-block w-100" alt="Students collaborating">
+                                <img src="{{ asset('landing_page_rss/manbis1.jpg') }}" class="d-block w-100" alt="Students collaborating">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('landing_page_rss/geoletter_img.png') }}" class="d-block w-100" alt="Using a system">
+                                <img src="{{ asset('landing_page_rss/manbis2.jpeg') }}" class="d-block w-100" alt="Using a system">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('landing_page_rss/room_img.png') }}" class="d-block w-100" alt="Team working">
+                                <img src="{{ asset('landing_page_rss/manbis3.jpg') }}" class="d-block w-100" alt="Team working">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('landing_page_rss/manbis4.jpeg') }}" class="d-block w-100" alt="Team working">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -117,8 +120,8 @@
                 <!-- Main Content -->
                 <div class="col-lg-8">
                     <div class="main-content h-100" data-aos="fade-up">
-                        <h2 class="content-title">GeoReserve</h2>
-                        <p class="text-muted">GeoReserve (Sistem Informasi Manajemen Geofisika) adalah platform digital yang dirancang untuk merevolusi cara kita mengelola administrasi dan fasilitas. Tujuan kami adalah menyederhanakan proses yang kompleks, mengurangi birokrasi, dan menyediakan akses informasi yang cepat dan transparan bagi seluruh civitas akademika.</p>
+                        <h2 class="content-title">SIMBA</h2>
+                        <p class="text-muted">SIMBA (Sistem Informasi Manajemen Bisnis) adalah platform digital yang dirancang untuk merevolusi cara kita mengelola administrasi dan fasilitas. Tujuan kami adalah menyederhanakan proses yang kompleks, mengurangi birokrasi, dan menyediakan akses informasi yang cepat dan transparan bagi seluruh civitas akademika.</p>
 
                         <hr class="my-4">
 
@@ -395,7 +398,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3927.2928733842655!2d112.79700709250486!3d-7.279900165259386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb3150bedb5cd2f2!2sTeknik+Geofisika+FTSP+ITS!5e0!3m2!1sid!2sid!4v1539787165326" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6744961603804!2d112.79048231405909!3d-7.277828994746941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa12b71da675%3A0xfe56d42b0e356d05!2sDepartemen+Manajemen+Bisnis+ITS!5e0!3m2!1sid!2sid!4v1539932683274" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -410,10 +413,10 @@
         <div class="row">
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <a href="" class="logo d-flex align-items-center me-auto me-xl-0 order-first">
-                    <img src="{{ asset('landing_page_rss/teknikgeo.png') }}" alt="" class="logo-img">
-                    <h1 class="sitename">GeoReserve</h1>
-                </a>
-                <p>Sistem Informasi Manajemen Geofisika yang membantu mengelola administrasi dan inventaris secara efisien dan transparan.</p>
+                    <img src="{{ asset('landing_page_rss/logoputih-manbis.png') }}" alt="" class="logo-img">
+{{--                    <h1 class="sitename text-white">SIMBA</h1>--}}
+                </a><br>
+                <p>Sistem Informasi Manajemen Bisnis yang membantu mengelola administrasi dan inventaris secara efisien dan transparan.</p>
                 <div class="footer-social mt-4">
                     <a href="{{ $pengaturan->link_yt }}"><i class="bi bi-youtube"></i></a>
                     <a href="{{ $pengaturan->link_fb }}"><i class="bi bi-facebook"></i></a>
@@ -433,13 +436,13 @@
                 <h5 class="footer-title">Alamat Kantor</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2 d-flex"><i class="bi bi-geo-alt-fill me-2 mt-1"></i><span>{{ $pengaturan->alamat }}</span></li>
-                    <li class="mb-2 d-flex"><i class="bi bi-envelope-fill me-2 mt-1"></i><span>tgeofisika@its.ac.id</span></li>
-                    <li class="mb-2 d-flex"><i class="bi bi-telephone-fill me-2 mt-1"></i><span>(031) 5953476</span></li>
+                    <li class="mb-2 d-flex"><i class="bi bi-envelope-fill me-2 mt-1"></i><span>mbisnis@its.ac.id</span></li>
+                    <li class="mb-2 d-flex"><i class="bi bi-telephone-fill me-2 mt-1"></i><span>081333380647</span></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p class="mb-0">&copy; {{ date('Y') }} GeoReserve - Sistem Informasi Manajemen Geofisika. All Rights Reserved.</p>
+            <p class="mb-0">&copy; {{ date('Y') }} SIMBA - Sistem Informasi Manajemen Bisnis. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
