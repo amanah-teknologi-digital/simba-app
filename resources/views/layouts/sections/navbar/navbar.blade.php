@@ -21,8 +21,8 @@
                     @if(isset($navbarFull))
                         <div class="app-brand justify-content-center">
                             <a href="{{url('/')}}" class="logo d-flex align-items-center me-auto me-xl-0 order-first">
-                                <img src="{{ asset('landing_page_rss/teknikgeo.png') }}" alt="">
-                                <h1 class="sitename">GeoReserve</h1>
+                                <img src="{{ asset('landing_page_rss/logo-manbis.png') }}" alt="">
+{{--                                <h1 class="sitename">GeoReserve</h1>--}}
                             </a>
                         </div>
 

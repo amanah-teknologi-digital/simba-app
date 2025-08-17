@@ -3,8 +3,8 @@
     <!-- ! Hide app brand if navbar-full -->
     <div class="app-brand justify-content-center demo">
         <a href="{{url('/')}}" class="logo d-flex align-items-center me-auto me-xl-0 order-first">
-            <img src="{{ asset('landing_page_rss/teknikgeo.png') }}" alt="">
-            <h1 class="sitename" style="font-size: 22px;">{{ config('variables.templateName') }}</h1>
+            <img src="{{ asset('landing_page_rss/logo-manbis.png') }}" alt="">
+{{--            <h1 class="sitename" style="font-size: 22px;">{{ config('variables.templateName') }}</h1>--}}
         </a>
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
             <i class="bx bx-chevron-left bx-sm d-flex align-items-center justify-content-center"></i>

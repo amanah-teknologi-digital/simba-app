@@ -61,7 +61,7 @@
     <div class="container position-relative d-flex align-items-center justify-content-between" >
 
         <a href="" class="logo d-flex align-items-center me-auto me-xl-0 order-first">
-            <img src="{{ asset('landing_page_rss/teknikgeo.png') }}" alt="">
+            <img src="{{ asset('landing_page_rss/logo-manbis.png') }}" alt="">
             <h1 class="sitename">GeoReserve</h1>
         </a>
 

@@ -67,7 +67,7 @@
 <body>
 {{-- KOP SURAT --}}
 <div class="kop">
-    <img src="{{ public_path('landing_page_rss/teknikgeo.png') }}" alt="Logo">
+    <img src="{{ public_path('landing_page_rss/logo-manbis.png') }}" alt="Logo">
     <div class="text">
         <h2>INSTITUT TEKNOLOGI SEPULUH NOPEMBER</h2>
         <h3>{{ $fakultas }}</h3>

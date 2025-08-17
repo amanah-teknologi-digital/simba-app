@@ -10,7 +10,7 @@
     <meta name="keywords" content="sistem informasi, manajemen, persuratan, booking ruangan, peminjaman peralatan, simba, ITS, Manajemen Bisnis ITS">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicons -->
-    <link href="{{ asset('landing_page_rss/teknikgeo.png') }}" rel="icon">
+    <link href="{{ asset('landing_page_rss/logo-manbis.png') }}" rel="icon">
     <link href="{{ asset('landing_page_rss/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts (Poppins) -->
