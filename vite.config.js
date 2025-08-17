@@ -63,6 +63,12 @@ export default defineConfig({
             refresh: true
         }),
         html()
-    ]
+    ],
+    server: {
+        host: 'simba-app.test', // pakai hostname yang sama dengan Laravel
+        port: 5175,
+        strictPort: true,
+        cors: true, // pastikan CORS diaktifkan
+    }
 });
 
