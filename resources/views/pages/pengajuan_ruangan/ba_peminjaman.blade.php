@@ -19,12 +19,12 @@
         .kop img {
             position: absolute;
             left: 0;
-            top: 0;
-            width: 80px;
+            top: 30;
+            width: 120px;
             height: auto;
         }
         .kop .text {
-            margin-left: 95px;
+            margin-left: 120px;
             text-align: center;
         }
         .kop h2, .kop h3, .kop p {
