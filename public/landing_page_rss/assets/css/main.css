@@ -574,5 +574,30 @@ h5{
     font-size: 1.125rem;
 }
 
+.hero-shape {
+    position: absolute;
+    bottom: -1px; /* -1px untuk menghindari garis tipis karena anti-aliasing browser */
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Posisikan di bawah konten tapi di atas background */
+}
+
+.hero-shape svg {
+    display: block; /* Hilangkan spasi ekstra di bawah SVG */
+    width: 100%;
+    height: auto; /* Biarkan tinggi menyesuaikan agar tidak gepeng */
+    filter: drop-shadow(0 -4px 8px rgba(0, 0, 0, 0.05));
+}
+
+.hero-section {
+    position: relative; /* Wajib agar elemen anak bisa diposisikan absolut terhadapnya */
+    padding-bottom: 120px; /* Beri ruang ekstra di bawah agar konten tidak terpotong lengkungan */
+    overflow: hidden; /* Mencegah elemen SVG keluar dari batas header */
+}
+
+.hero-section .container {
+    position: relative; /* Pastikan konten berada di atas shape */
+    z-index: 2;
+}
 
 

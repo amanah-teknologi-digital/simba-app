@@ -110,6 +110,11 @@
             </div>
         </div>
     </div>
+    <div class="hero-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path fill="#f8f9fa" fill-opacity="1" d="M0,64C480,128,960,0,1440,64L1440,100L0,100Z"></path>
+        </svg>
+    </div>
 </header>
 
 <main>
