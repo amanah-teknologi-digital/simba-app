@@ -560,7 +560,7 @@ body {
 }
 
 .ruangan-section {
-    background: linear-gradient(to bottom, #FFFFFF, #96b0e1);
+    background: linear-gradient(to bottom, #FFFFFF, var(--primary-color));
     min-height: 100vh;
     display: flex;
 }
