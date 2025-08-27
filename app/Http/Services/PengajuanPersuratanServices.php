@@ -388,9 +388,9 @@ class PengajuanPersuratanServices
         }
     }
 
-    public function simpanSurveyKepuasan($idKepuasan, $idPengajuan, $keterangan, $rating){
+    public function simpanSurveyKepuasan($idKepuasan, $idPengajuan, $record){
         try {
-            $this->repository->simpanSurveyKepuasan($idKepuasan, $idPengajuan, $keterangan, $rating);
+            $this->repository->simpanSurveyKepuasan($idKepuasan, $idPengajuan, $record);
         }catch(Exception $e){
             Log::error($e->getMessage());
             throw new Exception($e->getMessage());

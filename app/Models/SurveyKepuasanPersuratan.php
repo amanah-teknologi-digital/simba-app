@@ -14,6 +14,12 @@ class SurveyKepuasanPersuratan extends Model
         'id_kepuasan',
         'id_pengajuan',
         'rating',
+        'sebagai',
+        'keandalan',
+        'daya_tanggap',
+        'kepastian',
+        'empati',
+        'sarana',
         'keterangan',
         'created_at',
         'updated_at'

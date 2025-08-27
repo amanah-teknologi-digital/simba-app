@@ -159,6 +159,24 @@ $(document).ready(function () {
         rules: {
             rating: {
                 ratingRequired: true // Cukup gunakan 'required' bawaan
+            },
+            sebagai:{
+                required:true
+            },
+            keandalan:{
+                required:true
+            },
+            daya_tanggap:{
+                required:true
+            },
+            kepastian:{
+                required:true
+            },
+            empati:{
+                required:true
+            },
+            sarana:{
+                required:true
             }
         },
         // Pesan error yang akan ditampilkan
@@ -166,6 +184,24 @@ $(document).ready(function () {
             rating: {
                 // Pesan untuk aturan 'required'
                 ratingRequired: "Mohon pilih bintang sebagai rating."
+            },
+            sebagai: {
+                required: "Isian survey wajib diisi."
+            },
+            keandalan:{
+                required: "Isian survey wajib diisi."
+            },
+            daya_tanggap:{
+                required: "Isian survey wajib diisi."
+            },
+            kepastian:{
+                required: "Isian survey wajib diisi."
+            },
+            empati:{
+                required: "Isian survey wajib diisi."
+            },
+            sarana:{
+                required: "Isian survey wajib diisi."
             }
         },
         // Mengatur di mana pesan error akan ditempatkan
@@ -173,6 +209,18 @@ $(document).ready(function () {
             // Khusus untuk input 'rating', tampilkan error di div #error-rating
             if (element.attr("name") === "rating") {
                 error.appendTo("#error-rating");
+            }else if (element.attr("name") === "sebagai") {
+                error.appendTo("#error-sebagai");
+            }else if (element.attr("name") === "keandalan") {
+                error.appendTo("#error-keandalan");
+            }else if (element.attr("name") === "daya_tanggap") {
+                error.appendTo("#error-daya_tanggap");
+            }else if (element.attr("name") === "kepastian") {
+                error.appendTo("#error-kepastian");
+            }else if (element.attr("name") === "empati") {
+                error.appendTo("#error-empati");
+            }else if (element.attr("name") === "sarana") {
+                error.appendTo("#error-sarana");
             } else {
                 // Untuk input lain, gunakan penempatan default
                 error.insertAfter(element);
