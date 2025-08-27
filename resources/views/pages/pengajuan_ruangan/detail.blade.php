@@ -65,32 +65,178 @@
 
                                         <p>Terima kasih telah menggunakan layanan kami. Mohon luangkan waktu sejenak untuk mengisi survei kepuasan berikut agar kami bisa terus meningkatkan kualitas layanan.</p>
 
-                                        <div class="mb-3">
-                                            <label class="form-label">Beri Rating Kepuasan Anda:</label>
-                                            <div class="rating">
-                                                <input type="radio" id="star5" name="rating" value="5" />
-                                                <label for="star5" title="5 stars">★</label>
+                                        <div class="row g-4">
+                                            <div class="col-md-12 mb-3">
+                                                <label class="form-label">Beri Rating Kepuasan Anda:</label>
+                                                <div class="rating">
+                                                    <input type="radio" id="star5" name="rating" value="5" />
+                                                    <label for="star5" title="5 stars">★</label>
 
-                                                <input type="radio" id="star4" name="rating" value="4" />
-                                                <label for="star4" title="4 stars">★</label>
+                                                    <input type="radio" id="star4" name="rating" value="4" />
+                                                    <label for="star4" title="4 stars">★</label>
 
-                                                <input type="radio" id="star3" name="rating" value="3" />
-                                                <label for="star3" title="3 stars">★</label>
+                                                    <input type="radio" id="star3" name="rating" value="3" />
+                                                    <label for="star3" title="3 stars">★</label>
 
-                                                <input type="radio" id="star2" name="rating" value="2" />
-                                                <label for="star2" title="2 stars">★</label>
+                                                    <input type="radio" id="star2" name="rating" value="2" />
+                                                    <label for="star2" title="2 stars">★</label>
 
-                                                <input type="radio" id="star1" name="rating" value="1" />
-                                                <label for="star1" title="1 star">★</label>
+                                                    <input type="radio" id="star1" name="rating" value="1" />
+                                                    <label for="star1" title="1 star">★</label>
+                                                </div>
+                                                <div id="error-rating" style="color:red; margin-top: 5px;"></div>
+                                                <small class="text-muted">Pilih bintang 1 - 5 sesuai dengan tingkat kepuasan Anda.</small>
                                             </div>
-                                            <div id="error-rating" style="color:red; margin-top: 5px;"></div>
-                                            <small class="text-muted">Pilih bintang 1 - 5 sesuai dengan tingkat kepuasan Anda.</small>
-                                        </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label">Saudara mengisi sebagai</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Mahasiswa</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Dosen</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Tendik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Stakeholder</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Alumni/Lulusan</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sebagai" value="Mahasiswa" required>
+                                                        <label class="form-check-label" for="sebagai">Orang Tua Mahasiswa</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-sebagai" style="color:red; margin-top: 5px;"></div>
+                                            </div>
 
-                                        <div class="mb-3">
-                                            <label for="keterangan" class="form-label">Saran atau Perbaikan (opsional):</label>
-                                            <textarea class="form-control" name="keterangan" rows="3" placeholder="Tulis komentar atau saran Anda agar kami dapat memperbaiki layanan...">{{ old('keterangan') }}</textarea>
-                                            <small class="text-muted float-end">Kami sangat menghargai masukan Anda.</small>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label"><b>KEANDALAN (REALIBILITY)</b>: Kemampuan manajemen dalam memberikan pelayanan</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="keandalan" value="Sangat Baik" required>
+                                                        <label class="form-check-label" for="keandalan">4 = Sangat Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="keandalan" value="Baik" required>
+                                                        <label class="form-check-label" for="keandalan">3 = Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="keandalan" value="Cukup" required>
+                                                        <label class="form-check-label" for="keandalan">2 = Cukup</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="keandalan" value="Kurang" required>
+                                                        <label class="form-check-label" for="keandalan">1 = Kurang</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-keandalan" style="color:red; margin-top: 5px;"></div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label"><b>DAYA TANGGAP (RESPONSIVENESS)</b>: Kemauan manajemen dalam membantu dan memberikan jasa dengan cepat</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="daya_tanggap" value="Sangat Baik" required>
+                                                        <label class="form-check-label" for="daya_tanggap">4 = Sangat Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="daya_tanggap" value="Baik" required>
+                                                        <label class="form-check-label" for="daya_tanggap">3 = Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="daya_tanggap" value="Cukup" required>
+                                                        <label class="form-check-label" for="daya_tanggap">2 = Cukup</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="daya_tanggap" value="Kurang" required>
+                                                        <label class="form-check-label" for="daya_tanggap">1 = Kurang</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-daya_tanggap" style="color:red; margin-top: 5px;"></div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label"><b>KEPASTIAN (ASSURANCE)</b>: Kemampuan manajemen untuk memberi keyakinan bahwa pelayanan yang diberikan telah sesuai dengan ketentuan</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="kepastian" value="Sangat Baik" required>
+                                                        <label class="form-check-label" for="kepastian">4 = Sangat Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="kepastian" value="Baik" required>
+                                                        <label class="form-check-label" for="kepastian">3 = Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="kepastian" value="Cukup" required>
+                                                        <label class="form-check-label" for="kepastian">2 = Cukup</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="kepastian" value="Kurang" required>
+                                                        <label class="form-check-label" for="kepastian">1 = Kurang</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-kepastian" style="color:red; margin-top: 5px;"></div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label"><b>EMPATI (EMPATHY)</b>: Kesediaan/kepedulian manajemen untuk memberikan perhatian</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="empati" value="Sangat Baik" required>
+                                                        <label class="form-check-label" for="empati">4 = Sangat Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="empati" value="Baik" required>
+                                                        <label class="form-check-label" for="empati">3 = Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="empati" value="Cukup" required>
+                                                        <label class="form-check-label" for="empati">2 = Cukup</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="empati" value="Kurang" required>
+                                                        <label class="form-check-label" for="empati">1 = Kurang</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-empati" style="color:red; margin-top: 5px;"></div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label"><b>SARANA & PRASARANA (TANGIBLE)</b>: Penilaian anda terhadap kecukupan, aksesibilitas, kualitas sarana dan prasarana</label>
+                                                <div class="d-flex gap-3">
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sarana" value="Sangat Baik" required>
+                                                        <label class="form-check-label" for="sarana">4 = Sangat Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sarana" value="Baik" required>
+                                                        <label class="form-check-label" for="sarana">3 = Baik</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sarana" value="Cukup" required>
+                                                        <label class="form-check-label" for="sarana">2 = Cukup</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline form-check-success">
+                                                        <input class="form-check-input" type="radio" name="sarana" value="Kurang" required>
+                                                        <label class="form-check-label" for="sarana">1 = Kurang</label>
+                                                    </div>
+                                                </div>
+                                                <div id="error-sarana" style="color:red; margin-top: 5px;"></div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <label for="keterangan" class="form-label">Saran atau Perbaikan (opsional):</label>
+                                                <textarea class="form-control" name="keterangan" rows="3" placeholder="Tulis komentar atau saran Anda agar kami dapat memperbaiki layanan...">{{ old('keterangan') }}</textarea>
+                                            </div>
                                         </div>
 
                                         <button type="submit" class="btn btn-primary"><i class="bx bx-paper-plane me-2" style="font-size: 1.3rem;"></i>Kirim Penilaian</button>
@@ -105,7 +251,20 @@
                                                 <span style="color: {{ $i <= $dataPengajuan->surveykepuasan->rating ? '#f5b301' : '#ddd' }};">★</span>
                                             @endfor
                                             <br>
-                                            <small><em>{{ $dataPengajuan->surveykepuasan->keterangan ?? '-' }}</em></small><br>
+                                            <label class="form-label">Saudara mengisi sebagai: <b>{{ $dataPengajuan->surveykepuasan->sebagai }}</b></label>
+                                            <br>
+                                            <label class="form-label">KEANDALAN (REALIBILITY) Kemampuan manajemen dalam memberikan pelayanan: <b>{{ $dataPengajuan->surveykepuasan->keandalan }}</b></label>
+                                            <br>
+                                            <label class="form-label">DAYA TANGGAP (RESPONSIVENESS) Kemauan manajemen dalam membantu dan memberikan jasa dengan cepat: <b>{{ $dataPengajuan->surveykepuasan->daya_tanggap }}</b></label>
+                                            <br>
+                                            <label class="form-label">KEPASTIAN (ASSURANCE) Kemampuan manajemen untuk memberi keyakinan bahwa pelayanan yang diberikan telah sesuai dengan ketentuan: <b>{{ $dataPengajuan->surveykepuasan->kepastian }}</b></label>
+                                            <br>
+                                            <label class="form-label">EMPATI (EMPATHY) Kesediaan/kepedulian manajemen untuk memberikan perhatian: <b>{{ $dataPengajuan->surveykepuasan->empati }}</b></label>
+                                            <br>
+                                            <label class="form-label">SARANA & PRASARANA (TANGIBLE) Penilaian anda terhadap kecukupan, aksesibilitas, kualitas sarana dan prasarana: <b>{{ $dataPengajuan->surveykepuasan->sarana }}</b></label>
+                                            <br>
+                                            <label class="form-label">Kritik & Saran: <small><em>{{ $dataPengajuan->surveykepuasan->keterangan ?? '-' }}</em></small></label>
+                                            <br>
                                             <small class="text-muted">Dikirim pada: {{ $dataPengajuan->surveykepuasan->created_at->format('d M Y H:i') }}</small>
                                         </li>
                                     </ul>

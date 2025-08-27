@@ -609,11 +609,15 @@ class PengajuanRuanganController extends Controller
                 'id_pengajuan' => ['required'],
                 'rating' => ['required', 'integer', 'between:1,5'],
                 'keterangan' => ['nullable', 'string'],
+                'sebagai' => ['required'],
+                'keandalan' => ['required'],
+                'daya_tanggap' => ['required'],
+                'kepastian' => ['required'],
+                'empati' => ['required'],
+                'sarana' => ['required']
             ]);
 
             $idPengajuan = $request->id_pengajuan;
-            $keterangan = $request->keterangan;
-            $rating = $request->rating;
 
             $dataPengajuan = $this->service->getDataPengajuan($idPengajuan);
 
@@ -624,7 +628,7 @@ class PengajuanRuanganController extends Controller
             DB::beginTransaction();
 
             $idKepuasan = strtoupper(Uuid::uuid4()->toString());
-            $this->service->simpanSurveyKepuasan($idKepuasan, $idPengajuan, $keterangan, $rating);
+            $this->service->simpanSurveyKepuasan($idKepuasan, $idPengajuan, $request);
 
             DB::commit();
 

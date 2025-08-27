@@ -393,12 +393,18 @@ class PengajuanRuanganRepository
         ]);
     }
 
-    public function simpanSurveyKepuasan($idKepuasan, $idPengajuan, $keterangan, $rating){
+    public function simpanSurveyKepuasan($idKepuasan, $idPengajuan, $record){
         SurveyKepuasanRuangan::create([
             'id_kepuasan' => $idKepuasan,
             'id_pengajuan' => $idPengajuan,
-            'rating' => $rating,
-            'keterangan' => $keterangan
+            'rating' => $record->rating,
+            'sebagai' => $record->sebagai,
+            'keandalan' => $record->keandalan,
+            'daya_tanggap' => $record->daya_tanggap,
+            'kepastian' => $record->kepastian,
+            'empati' => $record->empati,
+            'sarana' => $record->sarana,
+            'keterangan' => $record->keterangan
         ]);
     }
 
