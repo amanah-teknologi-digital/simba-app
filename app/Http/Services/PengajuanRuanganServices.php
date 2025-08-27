@@ -170,7 +170,6 @@ class PengajuanRuanganServices
         $adminSudahSetuju           = $dataPersetujuan->where('id_tahapan', 2)->sortByDesc('created_at')->first();
         $pemeriksaAwalSudahSetuju   = $dataPersetujuan->where('id_tahapan', 3)->sortByDesc('created_at')->first();
         $kasubbagSudahSetuju        = $dataPersetujuan->where('id_tahapan', 4)->sortByDesc('created_at')->first();
-        $kadepSudahSetuju           = $dataPersetujuan->where('id_tahapan', 5)->sortByDesc('created_at')->first();
         $sudahPengembalian          = $dataPersetujuan->where('id_tahapan', 6)->sortByDesc('created_at')->first();
         $adminVerifikasiPengembalian= $dataPersetujuan->where('id_tahapan', 7)->sortByDesc('created_at')->first();
         $pemeriksaAkhirSudahSetuju  = $dataPersetujuan->where('id_tahapan', 8)->sortByDesc('created_at')->first();
@@ -180,7 +179,6 @@ class PengajuanRuanganServices
             'adminSudahSetuju',
             'pemeriksaAwalSudahSetuju',
             'kasubbagSudahSetuju',
-            'kadepSudahSetuju',
             'sudahPengembalian',
             'adminVerifikasiPengembalian',
             'pemeriksaAkhirSudahSetuju',
@@ -245,16 +243,8 @@ class PengajuanRuanganServices
                 if (!$kasubbagSudahSetuju) {
                     $must_aprove = 'VERIFIKASI';
                     $must_akses = 6;
-                    $tahapan_next = 5;
-                    $must_sebagai = 'Kasubbag';
-                    $label_verifikasi = 'Setujui';
-                }
-            }else if ($tahapan == 5) { // Verifikasi Kadep
-                if (!$kadepSudahSetuju) {
-                    $must_aprove = 'VERIFIKASI';
-                    $must_akses = 7;
                     $tahapan_next = 6;
-                    $must_sebagai = 'Kadep';
+                    $must_sebagai = 'Kasubbag';
                     $label_verifikasi = 'Setujui';
                 }
             }else if ($tahapan == 6) { // Pengajuan Berjalan
@@ -364,7 +354,7 @@ class PengajuanRuanganServices
             if ($tahapan == 4) { // Verifikasi Kasubbag
                 if (!$kasubbagSudahSetuju) {
                     $must_aprove = 'VERIFIKASI';
-                    $tahapan_next = 5;
+                    $tahapan_next = 6;
                     $label_verifikasi = 'Setujui';
                 }else{
                     if (empty($persetujuanTerakhir)){
@@ -377,26 +367,6 @@ class PengajuanRuanganServices
                 if (!$sudahVerifikasiPengembalian) {
                     $must_aprove = 'VERIFIKASI';
                     $tahapan_next = 10;
-                    $label_verifikasi = 'Setujui';
-                }else{
-                    if (empty($persetujuanTerakhir)){
-                        $message = 'Persetujuan Kosong!';
-                    }else{
-                        $data = $persetujuanTerakhir;
-                    }
-                }
-            }else{
-                if (empty($persetujuanTerakhir)){
-                    $message = 'Persetujuan Kosong!';
-                }else{
-                    $data = $persetujuanTerakhir;
-                }
-            }
-        }else if ($id_akses == 7){ //kadep
-            if ($tahapan == 5) { // Verifikasi Kadep
-                if (!$kadepSudahSetuju) {
-                    $must_aprove = 'VERIFIKASI';
-                    $tahapan_next = 6;
                     $label_verifikasi = 'Setujui';
                 }else{
                     if (empty($persetujuanTerakhir)){

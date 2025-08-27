@@ -422,7 +422,7 @@
                                                     @endif
                                                 </div>
                                             </li>
-                                            <li class="timeline-item timeline-item-transparent {{ empty($kasubbagSudahSetuju) ? 'border-left-dashed' : ($kasubbagSudahSetuju->id_statuspersetujuan == 1 ? 'border-success' : 'border-danger') }}">
+                                            <li class="timeline-item timeline-item-transparent border-transparent">
                                                 @if(empty($kasubbagSudahSetuju))
                                                     <span class="timeline-point timeline-point-secondary"></span>
                                                 @else
@@ -445,33 +445,6 @@
                                                         @else
                                                             <p class="mt-3 mb-3">Ditolak oleh {{ $kasubbagSudahSetuju->nama_penyetuju }}</p>
                                                             <p class="small fst-italic">{{ $kasubbagSudahSetuju->keterangan }}</p>
-                                                        @endif
-                                                    @endif
-                                                </div>
-                                            </li>
-                                            <li class="timeline-item timeline-item-transparent border-transparent">
-                                                @if(empty($kadepSudahSetuju))
-                                                    <span class="timeline-point timeline-point-secondary"></span>
-                                                @else
-                                                    @if($kadepSudahSetuju->id_statuspersetujuan == 1)
-                                                        <span class="timeline-point"><i class="bx bx-check-circle text-success"></i></span>
-                                                    @else
-                                                        <span class="timeline-point"><i class="bx bx-x-circle text-danger"></i></span>
-                                                    @endif
-                                                @endif
-                                                <div class="timeline-event">
-                                                    <div class="timeline-header">
-                                                        <h6 class="mb-0">Verifikasi Kadep</h6>
-                                                        @if(!empty($kadepSudahSetuju))
-                                                            <small class="text-muted">{{ $kadepSudahSetuju->created_at->translatedFormat('d F Y h:i') }}</small>
-                                                        @endif
-                                                    </div>
-                                                    @if(!empty($kadepSudahSetuju))
-                                                        @if($kadepSudahSetuju->id_statuspersetujuan == 1)
-                                                            <p class="mt-3 mb-3">Diverifikasi oleh {{ $kadepSudahSetuju->nama_penyetuju }}</p>
-                                                        @else
-                                                            <p class="mt-3 mb-3">Ditolak oleh {{ $kadepSudahSetuju->nama_penyetuju }}</p>
-                                                            <p class="small fst-italic">{{ $kadepSudahSetuju->keterangan }}</p>
                                                         @endif
                                                     @endif
                                                 </div>
@@ -616,8 +589,8 @@
             <div class="card" <?= ($statusVerifikasi['must_aprove'] == 'AJUKAN' || $statusVerifikasi['must_aprove'] == 'PENGEMBALIAN' || $statusVerifikasi['must_aprove'] == 'VERIFIKASI') ? 'style="margin-bottom: 5.5rem !important;"':'style="margin-bottom: 1.5rem !important;"' ?> >
                 <div class="card-header d-flex align-items-center pb-4 border-bottom">
                     <h5 class="card-title mb-0 fw-bold d-flex align-items-center"><i class="bx bx-building pb-0" style="font-size: 1.3rem;"></i>&nbsp;Data Pengajuan Ruangan</h5>
-                    @if(!empty($kadepSudahSetuju))
-                        @if($kadepSudahSetuju->id_statuspersetujuan == 1)
+                    @if(!empty($kasubbagSudahSetuju))
+                        @if($kasubbagSudahSetuju->id_statuspersetujuan == 1)
                             &nbsp;<a href="{{ route('pengajuanruangan.bapeminjaman', $idPengajuan) }}" target="_blank" class="btn btn-sm btn-outline-success" style="margin-left: 1rem"><span class="bx bx-download me-2 "></span>Berita Acara Peminjaman</a>
                         @endif
                     @endif
@@ -786,15 +759,15 @@
                                     </table>
                                 </div>
                             </div>
-                            @if(!empty($kadepSudahSetuju))
-                                @if($kadepSudahSetuju->id_statuspersetujuan == 1)
+                            @if(!empty($kasubbagSudahSetuju))
+                                @if($kasubbagSudahSetuju->id_statuspersetujuan == 1)
                                     <div class="col-sm-12">
                                         <div class="fw-semibold small text-secondary mb-3">
                                             Kondisi Ruangan dan Peralatan Sesudah Acara
                                             <i>(foto minimal 5, dan ukuran maksimal 5 mb)</i>
                                         </div>
 
-                                        @if($dataPengajuan->id_tahapan == 6)
+                                        @if($dataPengajuan->id_tahapan == 6 && $idAkses == 8)
                                             <input type="file" class="form-control" name="filesesudahacara[]" id="filesesudahacara" accept="image/*" multiple autofocus>
                                         @else
                                             @if($dataPengajuan->filepengajuanruangan && $dataPengajuan->filepengajuanruangan->count() > 0)
@@ -822,7 +795,7 @@
                                                     @endforeach
                                                 </div>
                                             @else
-                                                <div class="text-muted small mt-2">Belum ada foto yang diunggah.</div>
+                                                <div class="small mt-2 text-center text-danger">Belum ada foto yang diunggah.</div>
                                             @endif
                                         @endif
                                     </div>

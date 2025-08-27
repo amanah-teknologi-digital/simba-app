@@ -160,12 +160,6 @@ class DashboardRepository
             });
         }
 
-        if ($idAkses == 7){ //kadep
-            $data = $data->whereHas('persetujuan', function($q){
-                $q->where('id_statuspersetujuan', 1)->where('id_tahapan', 4); //jika sudah disetujui pada tahapan verifikasi kasubbag
-            });
-        }
-
         $data = $data->get();
 
         return $data;

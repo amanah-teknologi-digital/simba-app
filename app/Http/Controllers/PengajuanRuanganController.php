@@ -343,12 +343,12 @@ class PengajuanRuanganController extends Controller
             }
         }
         $statusVerifikasi = $this->service->getStatusVerifikasi($idPengajuan, $this->subtitle, $dataPengajuan);
+        $idAkses = $this->idAkses;
 
-        return view('pages.pengajuan_ruangan.detail', compact('dataPengajuan', 'idPengajuan', 'isEdit', 'statusVerifikasi', 'title', 'jadwalPeminjaman',
+        return view('pages.pengajuan_ruangan.detail', compact('dataPengajuan', 'idPengajuan', 'isEdit', 'statusVerifikasi', 'title', 'jadwalPeminjaman', 'idAkses',
             'adminSudahSetuju',
             'pemeriksaAwalSudahSetuju',
             'kasubbagSudahSetuju',
-            'kadepSudahSetuju',
             'sudahPengembalian',
             'adminVerifikasiPengembalian',
             'pemeriksaAkhirSudahSetuju',
@@ -476,9 +476,6 @@ class PengajuanRuanganController extends Controller
             }elseif ($dataPengajuan->id_tahapan == 4 && $mustVerif == 'VERIFIKASI'){
                 $this->service->updateTahapanPengajuan($idPengajuan, $idTahapan);
                 $this->service->tambahPersetujuan($idPengajuan, $idAkses, $dataPengajuan->id_tahapan, 1, null);
-            }elseif ($dataPengajuan->id_tahapan == 5 && $mustVerif == 'VERIFIKASI'){
-                $this->service->updateTahapanPengajuan($idPengajuan, $idTahapan);
-                $this->service->tambahPersetujuan($idPengajuan, $idAkses, $dataPengajuan->id_tahapan, 1, null);
             }elseif ($dataPengajuan->id_tahapan == 6 && $mustVerif == 'PENGEMBALIAN'){
                 $request->validate([
                     'filesesudahacara'   => 'required|array|min:5',
@@ -541,7 +538,7 @@ class PengajuanRuanganController extends Controller
         $dataPengaturan = $this->service->getDataPengaturan();
         $fakultas = $this->fakultas;
         $dataPersetujuan = $dataPengajuan->persetujuan;
-        $sudahSetujuKadep = $dataPersetujuan->where('id_tahapan', 5)->sortByDesc('created_at')->first();
+        $sudahSetujuKadep = $dataPersetujuan->where('id_tahapan', 4)->sortByDesc('created_at')->first();
 
         if (!empty($sudahSetujuKadep)){
             if ($sudahSetujuKadep->id_statuspersetujuan == 1){
